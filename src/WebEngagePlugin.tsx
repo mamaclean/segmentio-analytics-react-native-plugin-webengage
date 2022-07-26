@@ -35,7 +35,7 @@ export class WebEngagePlugin extends DestinationPlugin {
   identify(event: IdentifyEventType) {
     if (this.isInitialized()) {
       const userId = event.userId;
-      this.webEngage?.login(userId)
+      this.webEngage?.user.login(userId)
     }
     return event;
   }
@@ -60,6 +60,6 @@ export class WebEngagePlugin extends DestinationPlugin {
   }
 
   reset(): void {
-    this.webEngage?.logout();
+    this.webEngage?.user.logout();
   }
 }
