@@ -1,1 +1,1 @@
-export * from './WebEngagePlugin.js';
+export * from './WebEngagePlugin';
