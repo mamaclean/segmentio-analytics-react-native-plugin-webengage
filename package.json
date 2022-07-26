@@ -2,7 +2,7 @@
   "name": "segmentio-analytics-react-native-plugin-webengage",
   "version": "0.1.0",
   "description": "The hassle-free way to add WebEngage to Segment analytics in your React-Native app.",
-  "main": "dist/cjs/index.js",
+  "main": "lib/commonjs/index",
   "scripts": {
     "build": "bob build",
     "test": "jest",
@@ -16,7 +16,7 @@
     "ios",
     "android"
   ],
-  "module": "dist/esm/index.js",
+  "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index",
   "source": "src/index",
@@ -49,7 +49,7 @@
     "react-native-webengage": "^1.2.13"
   },
   "devDependencies": {
-    "bob-the-bundler": "^3.0.4",
+    "react-native-builder-bob": "^0.18.3",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/git": "^10.0.1",
