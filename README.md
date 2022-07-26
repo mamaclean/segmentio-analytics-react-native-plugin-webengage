@@ -4,16 +4,16 @@
 
 ## Installation
 
-You need to install the `segment-analytics-react-native-plugin-webengage` and its dependencies: `react-native-webengage`
+You need to install the `segmentio-analytics-react-native-plugin-webengage` and its dependencies: `react-native-webengage`
 
 Using NPM:
 ```bash
-npm install --save segment-analytics-react-native-plugin-webengage react-native-webengage
+npm install --save segmentio-analytics-react-native-plugin-webengage react-native-webengage
 ```
 
 Using Yarn:
 ```bash
-yarn add segment-analytics-react-native-plugin-webengage react-native-webengage
+yarn add segmentio-analytics-react-native-plugin-webengage react-native-webengage
 ```
 
 ## Usage
@@ -25,7 +25,7 @@ In your code where you initialize the analytics client call the `.add(plugin)` m
 ```ts
 import { createClient } from '@segment/analytics-react-native';
 
-import { WebEngagePlugin } from 'segment-analytics-react-native-plugin-webengage';
+import { WebEngagePlugin } from 'segmentio-analytics-react-native-plugin-webengage';
 
 const segmentClient = createClient({
   writeKey: 'SEGMENT_KEY'

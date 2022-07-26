@@ -1,5 +1,5 @@
 {
-  "name": "segment-analytics-react-native-plugin-webengage",
+  "name": "segmentio-analytics-react-native-plugin-webengage",
   "version": "0.1.0",
   "description": "The hassle-free way to add WebEngage to Segment analytics in your React-Native app.",
   "main": "lib/commonjs/index",
