@@ -46,10 +46,10 @@
   "homepage": "https://github.com/mamaclean/segmentio-analytics-react-native-plugin-webengage#readme",
   "dependencies": {
     "@segment/analytics-react-native": "*",
-    "bob-the-bundler": "^3.0.4",
     "react-native-webengage": "^1.2.13"
   },
   "devDependencies": {
+    "bob-the-bundler": "^3.0.4",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/git": "^10.0.1",
