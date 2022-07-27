@@ -33,33 +33,43 @@ export class WebEngagePlugin extends DestinationPlugin {
   }
 
   identify(event: IdentifyEventType) {
+    console.log("WebEngage login - pre check");
     if (this.isInitialized()) {
       const userId = event.userId;
-      this.webEngage?.user.login(userId)
+      console.log("WebEngage login");
+      this.webEngage.user.login(userId)
     }
     return event;
   }
 
   track(event: TrackEventType) {
+    console.log("WebEngage track - pre check");
     const eventName = event.event;
     const properties = event.properties as JsonMap;
 
     if (this.isInitialized()) {
-      this.webEngage?.track(eventName, properties)
+      console.log("WebEngage track");
+      this.webEngage.track(eventName, properties);
     }
     return event;
   }
 
   screen(event: ScreenEventType) {
+    console.log("WebEngage screen - pre check");
     if (this.isInitialized()) {
+      console.log("WebEngage screen");
       const name = event.name;
       const properties = event.properties;
-      this.webEngage?.screen(name, properties)
+      this.webEngage.screen(name, properties)
     }
     return event;
   }
 
   reset(): void {
-    this.webEngage?.user.logout();
+    console.log("WebEngage reset - pre check");
+    if (this.isInitialized()) {
+      console.log("WebEngage reset");
+      this.webEngage.user.logout();
+    }
   }
 }
