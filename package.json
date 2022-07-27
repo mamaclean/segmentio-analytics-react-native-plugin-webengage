@@ -44,8 +44,10 @@
     "url": "https://github.com/mamaclean/segmentio-analytics-react-native-plugin-webengage/issues"
   },
   "homepage": "https://github.com/mamaclean/segmentio-analytics-react-native-plugin-webengage#readme",
+  "peerDependencies": {
+    "@segment/analytics-react-native": "*"
+  },
   "dependencies": {
-    "@segment/analytics-react-native": "*",
     "react-native-webengage": "^1.2.13"
   },
   "devDependencies": {
