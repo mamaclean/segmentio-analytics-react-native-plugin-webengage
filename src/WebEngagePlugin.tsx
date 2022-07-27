@@ -8,7 +8,6 @@ import {
   UpdateType,
   JsonMap,
 } from "@segment/analytics-react-native";
-import type { SegmentWebEngageSettings } from './types';
 import WebEngage from "react-native-webengage";
 
 export class WebEngagePlugin extends DestinationPlugin {
@@ -16,20 +15,11 @@ export class WebEngagePlugin extends DestinationPlugin {
   key = 'WebEngage';
 
   private webEngage: WebEngage | undefined;
-  private settings: SegmentWebEngageSettings | undefined;
   private isInitialized = () =>
-      this.webEngage !== undefined && this.settings !== undefined;
+      this.webEngage !== undefined;
 
-  update(settings: SegmentAPISettings, _: UpdateType) {
-    const webEngageSettings = settings.integrations[
-        this.key
-        ] as SegmentWebEngageSettings;
-
-    if (webEngageSettings === undefined || this.webEngage !== undefined) {
-      return;
-    }
+  update(_settings: SegmentAPISettings, _: UpdateType) {
     this.webEngage = new WebEngage();
-    this.settings = webEngageSettings;
   }
 
   identify(event: IdentifyEventType) {
